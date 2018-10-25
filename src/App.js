@@ -10,7 +10,7 @@ import {blue, pink} from '@material-ui/core/colors/blue';
 import Switch from '@material-ui/core/Switch';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
+
 
 
 
@@ -56,11 +56,6 @@ class App extends Component {
                   <Typography variant="h2">
                     <Card justify="center" className="card-header">
                       Pio M.
-                      <Avatar
-                        alt="Pio Molina"
-                        src={require("./images/headshotPM.jpg")}
-                        className="avatar-please"
-                        />
                     </Card>
                   </Typography>
                   <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />
