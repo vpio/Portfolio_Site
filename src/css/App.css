@@ -55,3 +55,7 @@
 .buttons-margin{
   padding-top: 2em;
 }
+
+#download-link {
+  text-decoration: none;
+}

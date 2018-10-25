@@ -75,14 +75,16 @@ class App extends Component {
             <Typography variant="h5" className="buttons-margin">
               <ProjectGrid checked={checked}/>
             </Typography>
+            <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
             <Chip
-              
               label="Download My Resume"
               clickable
               color="primary"
               onDelete={this.handleDelete}
+
               deleteIcon={<GetApp />}
               />
+          </a>
             </div>
           </MuiThemeProvider>
         </CssBaseline>
