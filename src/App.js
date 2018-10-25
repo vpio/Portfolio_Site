@@ -10,6 +10,11 @@ import {blue, pink} from '@material-ui/core/colors/blue';
 import Switch from '@material-ui/core/Switch';
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
+import Avatar from '@material-ui/core/Avatar';
+import Chip from '@material-ui/core/Chip';
+import GetApp from '@material-ui/icons/GetApp';
+
+
 
 
 
@@ -43,6 +48,10 @@ class App extends Component {
     this.setState(state => ({ checked: !state.checked }));
   };
 
+  handleDelete = () => {
+  alert('You clicked the delete icon.'); // eslint-disable-line no-alert
+}
+
   render() {
     const { checked } = this.state;
 
@@ -53,18 +62,28 @@ class App extends Component {
             <div className="banner-top">
               <Grid container justify="center">
                 <div className="banner">
-                  <Typography variant="h2">
+                  <Typography variant="h4">
                     <Card justify="center" className="card-header">
-                      Pio M.
+                      Pio Molina
                     </Card>
                   </Typography>
+                  Projects
                   <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />
                 </div>
               </Grid>
-            </div>
+
             <Typography variant="h5" className="buttons-margin">
               <ProjectGrid checked={checked}/>
             </Typography>
+            <Chip
+              
+              label="Download My Resume"
+              clickable
+              color="primary"
+              onDelete={this.handleDelete}
+              deleteIcon={<GetApp />}
+              />
+            </div>
           </MuiThemeProvider>
         </CssBaseline>
       </div>

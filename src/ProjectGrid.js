@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Grow from '@material-ui/core/Grow';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
+import CardMedia from '@material-ui/core/CardMedia';
 
 
 
@@ -16,8 +17,15 @@ const ProjectGrid = props => {
           <Grid item>
             <Card className="card">
               <CardContent>
-                Muver
+             Muver
               </CardContent>
+            { /*  <CardMedia
+              component="img"
+              alt="Contemplative Reptile"
+              image={require("./images/muverlogo.png")}
+              title="Contemplative Reptile"
+              className="card-image card-fix"
+              /> */ }
               <CardActions>
                 <Button href="https://muvers.herokuapp.com/" target="_blank" size="small">Learn More</Button>
               </CardActions>
@@ -32,8 +40,16 @@ const ProjectGrid = props => {
           <Grid item>
             <Card className="card">
               <CardContent>
-                Wynning Smiles
+            Wynning Smiles
               </CardContent>
+            { /*  <CardMedia
+              component="img"
+              alt="Contemplative Reptile"
+              size="small"
+              image={require("./images/wynjoke-logo2.png")}
+              title="Contemplative Reptile"
+              className="wynjoke-logo card-fix"
+              /> */ }
               <CardActions>
                 <Button href="https://wynningsmiles.herokuapp.com/" target="_blank" size="small">Learn More</Button>
               </CardActions>
