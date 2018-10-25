@@ -1,0 +1,41 @@
+.App{
+  /* background-color: black; */
+  /* height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+}
+
+.card{
+  width: 10em;
+}
+
+.card-header{
+  background-color: #3f50b5 !important;
+  color: white;
+  height: 20vh;
+  width: 6em;
+  padding-top: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner{
+  text-align: center;
+  margin-top: 10em;
+}
+.banner-top{
+  text-align: center;
+  background-color: #002884;
+  height: 30vh;
+}
+
+.grid{
+  display: flex;
+  justify-content: center;
+}
+
+.buttons-margin{
+  padding-top: 7em;
+}
