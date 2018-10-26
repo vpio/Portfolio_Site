@@ -65,19 +65,21 @@ class App extends Component {
                   </Typography>
                   {/*Projects
                     <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
-                    <Typography variant="h5" className="buttons-margin">
-                      <ProjectGrid checked={checked}/>
-                    </Typography>
-                    <div className="download-space">
-                      <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
-                        <Chip
-                          label="Download My Resume"
-                          clickable
-                          color="primary"
-                          onDelete={this.handleDelete}
-                          deleteIcon={<GetApp />}
-                          />
-                      </a>
+                    <div className="main-section">
+                      <Typography variant="h5" className="buttons-margin">
+                        <ProjectGrid checked={checked}/>
+                      </Typography>
+                      <div className="download-space">
+                        <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
+                          <Chip
+                            label="Download My Resume"
+                            clickable
+                            color="primary"
+                            onDelete={this.handleDelete}
+                            deleteIcon={<GetApp />}
+                            />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </Grid>

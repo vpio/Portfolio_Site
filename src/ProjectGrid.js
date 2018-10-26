@@ -13,6 +13,13 @@ import Typography from '@material-ui/core/Typography';
 const ProjectGrid = props => {
   return(
     <div>
+      <Grow in={props.checked}>
+        <div className="project-section-title">
+          <Typography variant="h2" color="default">
+            Projects
+          </Typography>
+        </div>
+      </Grow>
       <Grid container justify="center" spacing={16}>
         <Grow in={props.checked}>
           <Grid item>

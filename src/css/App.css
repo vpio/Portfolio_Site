@@ -9,8 +9,8 @@
 .card{
   width: 10em;
   /* height: 10em; */
-  background-color: black !important;
-  color: white;
+
+  /* color: white; */
 }
 
 .card-image{
@@ -46,7 +46,7 @@
 .banner-top{
   text-align: center;
   background-color: #03487c;
-  height: 100vh;
+  height: 160vh;
 }
 
 .grid{
@@ -75,5 +75,15 @@
 }
 
 .site-title{
+  padding-top: 5em;
   color: white !important;
+}
+
+.main-section{
+  padding-top: 17em;
+  font-weight: bold;
+}
+
+.project-section-title{
+  padding-bottom: 5em;
 }
