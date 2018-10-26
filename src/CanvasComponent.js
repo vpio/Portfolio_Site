@@ -38,7 +38,7 @@ class CanvasComponent extends React.Component {
 
     var draw = function() {
       c.width = w;
-      c.height = h;
+      c.height = 1200;
 
       for(let t = 0; t < particles.length; t++) {
         var p = particles[t];
