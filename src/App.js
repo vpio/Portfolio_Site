@@ -58,30 +58,30 @@ class App extends Component {
           <MuiThemeProvider theme={theme}>
             <div className="banner-top">
               <CanvasComponent />
-              <Grid container justify="center">
+              <Grid container justify="center" className="zindex-test">
                 <div className="banner">
-                  <Typography variant="h4">
-                      Pio Molina
+                  <Typography variant="h4" className="site-title">
+                    Pio Molina
                   </Typography>
                   {/*Projects
-                  <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
-                </div>
-              </Grid>
-            <Typography variant="h5" className="buttons-margin">
-              <ProjectGrid checked={checked}/>
-            </Typography>
-            <div className="download-space">
-              <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
-                <Chip
-                  label="Download My Resume"
-                  clickable
-                  color="primary"
-                  onDelete={this.handleDelete}
+                    <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
+                    <Typography variant="h5" className="buttons-margin">
+                      <ProjectGrid checked={checked}/>
+                    </Typography>
 
-                  deleteIcon={<GetApp />}
-                  />
-              </a>
-            </div>
+                    <div className="download-space">
+                      <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
+                        <Chip
+                          label="Download My Resume"
+                          clickable
+                          color="primary"
+                          onDelete={this.handleDelete}
+                          deleteIcon={<GetApp />}
+                          />
+                      </a>
+                    </div>
+                  </div>
+                </Grid>
             </div>
           </MuiThemeProvider>
         </CssBaseline>
