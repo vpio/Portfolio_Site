@@ -16,6 +16,7 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
+import MusicSection from './MusicSection';
 
 
 configureAnchors({offset: -60, scrollDuration: 200})
@@ -54,7 +55,7 @@ class App extends Component {
   }
 
   newSection = () => {
-    const isTop = window.scrollY < 230;
+    const isTop = window.scrollY > 10;
     const {activeStep} = this.state;
       if (isTop !== this.state.isTop) {
         this.setState({ isTop, activeStep: 1 })
@@ -83,11 +84,15 @@ class App extends Component {
                 <div className="banner">
                   <Stepper activeStep={activeStep} orientation="vertical" className="main-stepper">
                     <Step>
-                      <StepLabel><a href='#section1'></a></StepLabel>
+                      <StepLabel></StepLabel>
 
                     </Step>
                     <Step>
-                      <StepLabel><a href='#section2'></a></StepLabel>
+                      <StepLabel></StepLabel>
+
+                    </Step>
+                    <Step>
+                      <StepLabel></StepLabel>
 
                     </Step>
                   </Stepper>
@@ -101,7 +106,7 @@ class App extends Component {
                         <Button href='#section2' color="primary" variant="outlined" size="large" className="home-button">
                           Projects
                         </Button>
-                        <Button href='#section2' color="primary" variant="outlined" size="large" className="home-button">
+                        <Button href='#section3' color="primary" variant="outlined" size="large" className="home-button">
                           Music
                         </Button>
                       </div>
@@ -126,6 +131,13 @@ class App extends Component {
                                 />
                             </a>
                           </div>
+                        </div>
+                      </ScrollableAnchor>
+                    </div>
+                    <div className="main-section">
+                      <ScrollableAnchor id={'section3'}>
+                        <div>
+                          <MusicSection />
                         </div>
                       </ScrollableAnchor>
                     </div>
