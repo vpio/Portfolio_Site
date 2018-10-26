@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   newSection = () => {
-    const isTop = window.scrollY < 200;
+    const isTop = window.scrollY < 230;
     const {activeStep} = this.state;
       if (isTop !== this.state.isTop) {
         this.setState({ isTop, activeStep: 1 })
