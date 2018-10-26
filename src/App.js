@@ -44,6 +44,10 @@ class App extends Component {
     checked: false,
   };
 
+  componentDidMount(){
+    window.addEventListener('scroll', () => this.handleChange())
+  }
+
   handleChange = () => {
     this.setState(state => ({ checked: !state.checked }));
   };
