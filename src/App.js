@@ -10,7 +10,14 @@ import Chip from '@material-ui/core/Chip';
 import GetApp from '@material-ui/icons/GetApp';
 import _ from 'lodash';
 import CanvasComponent from './CanvasComponent';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import Button from '@material-ui/core/Button';
 
+configureAnchors({offset: -60, scrollDuration: 200})
 
 // Setting up the theme using Material UI Library
 const theme = createMuiTheme({
@@ -36,10 +43,22 @@ const theme = createMuiTheme({
 class App extends Component {
   state = {
     checked: false,
+    activeStep: 0,
+    isTop: false
   };
 
   componentDidMount(){
-    window.addEventListener('scroll', _.throttle(this.handleChange, 1000, { trailing: false, leading: true }))
+    // window.addEventListener('scroll', _.throttle(this.handleChange, 1500, { trailing: false, leading: true }))
+    window.addEventListener('scroll', _.throttle(this.newSection, 1200, { trailing: false, leading: true }))
+  }
+
+  newSection = () => {
+    const isTop = window.scrollY < 200;
+    const {activeStep} = this.state;
+      if (isTop !== this.state.isTop) {
+        this.setState({ isTop, activeStep: 1 })
+      }
+      else { this.setState({activeStep: 0 }) }
   }
 
   handleChange = () => {
@@ -51,7 +70,7 @@ class App extends Component {
   }
 
   render() {
-    const { checked } = this.state;
+    const { checked, activeStep, isTop } = this.state;
 
     return (
       <div className="App">
@@ -61,27 +80,53 @@ class App extends Component {
               <CanvasComponent className="canvas-style"/>
               <Grid container justify="center" className="zindex-test">
                 <div className="banner">
-                  <Typography variant="h4" className="site-title">
-                    Pio Molina
-                  </Typography>
+                  <Stepper activeStep={activeStep} orientation="vertical" className="main-stepper">
+                    <Step>
+                      <StepLabel><a href='#section1'></a></StepLabel>
 
-                  {/*Projects
-                    <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
-                    <div className="main-section">
-                      <Typography variant="h5" className="buttons-margin">
-                        <ProjectGrid checked={checked}/>
+                    </Step>
+                    <Step>
+                      <StepLabel><a href='#section2'></a></StepLabel>
+
+                    </Step>
+                  </Stepper>
+
+                  <ScrollableAnchor id={'section1'}>
+                    <div>
+                      <Typography variant="h3" className="site-title">
+                        Pio Molina
                       </Typography>
-                      <div className="download-space">
-                        <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
-                          <Chip
-                            label="Download My Resume"
-                            clickable
-                            color="primary"
-                            onDelete={this.handleDelete}
-                            deleteIcon={<GetApp />}
-                            />
-                        </a>
+                      <div className="button-group">
+                        <Button href='#section2' color="primary" variant="outlined" size="large" className="home-button">
+                          Projects
+                        </Button>
+                        <Button href='#section2' color="primary" variant="outlined" size="large" className="home-button">
+                          Music
+                        </Button>
                       </div>
+                      {/*Projects
+                        <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
+                      </div>
+                    </ScrollableAnchor>
+                    <div className="main-section">
+                      <ScrollableAnchor id={'section2'}>
+                        <div>
+                          <Typography variant="h5" className="buttons-margin">
+                            <ProjectGrid checked={isTop}/>
+                          </Typography>
+                          <div className="download-space">
+                            <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
+                              <Chip
+                                label="Download My Resume"
+                                clickable
+                                color="primary"
+                                onDelete={this.handleDelete}
+                                deleteIcon={<GetApp />}
+                                />
+                            </a>
+                          </div>
+                        </div>
+                      </ScrollableAnchor>
                     </div>
                   </div>
                 </Grid>
