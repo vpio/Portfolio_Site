@@ -15,7 +15,7 @@ const ProjectGrid = props => {
     <div>
       <Grow in={props.checked}>
         <div className="project-section-title">
-          <Typography variant="h2" color="default">
+          <Typography variant="h2" className="project-title">
             Projects
           </Typography>
         </div>
