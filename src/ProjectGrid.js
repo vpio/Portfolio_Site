@@ -6,6 +6,7 @@ import Grow from '@material-ui/core/Grow';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
 
 
@@ -27,7 +28,16 @@ const ProjectGrid = props => {
               className="card-image card-fix"
               /> */ }
               <CardActions>
-                <Button href="https://muvers.herokuapp.com/" target="_blank" size="small">Learn More</Button>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Lizard
+                  </Typography>
+                  <Typography component="p">
+                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                    across all continents except Antarctica
+                  </Typography>
+                </CardContent>
+                <Button href="https://muvers.herokuapp.com/" target="_blank" variant="contained" color="default">Learn More</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -51,7 +61,7 @@ const ProjectGrid = props => {
               className="wynjoke-logo card-fix"
               /> */ }
               <CardActions>
-                <Button href="https://wynningsmiles.herokuapp.com/" target="_blank" size="small">Learn More</Button>
+                <Button href="https://wynningsmiles.herokuapp.com/" target="_blank" variant="contained" color="default">Learn More</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -67,7 +77,7 @@ const ProjectGrid = props => {
                 HTML CSS
               </CardContent>
               <CardActions>
-                <Button href="https://github.com/vpio/HTML-CSS-Recreation" target="_blank" size="small">Learn More</Button>
+                <Button href="https://github.com/vpio/HTML-CSS-Recreation" target="_blank" variant="contained" color="default">Learn More</Button>
               </CardActions>
             </Card>
           </Grid>

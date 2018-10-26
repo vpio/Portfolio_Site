@@ -63,9 +63,7 @@ class App extends Component {
               <Grid container justify="center">
                 <div className="banner">
                   <Typography variant="h4">
-                    <Card justify="center" className="card-header">
                       Pio Molina
-                    </Card>
                   </Typography>
                   Projects
                   <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />
@@ -75,16 +73,18 @@ class App extends Component {
             <Typography variant="h5" className="buttons-margin">
               <ProjectGrid checked={checked}/>
             </Typography>
-            <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
-            <Chip
-              label="Download My Resume"
-              clickable
-              color="primary"
-              onDelete={this.handleDelete}
+            <div className="download-space">
+              <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
+                <Chip
+                  label="Download My Resume"
+                  clickable
+                  color="primary"
+                  onDelete={this.handleDelete}
 
-              deleteIcon={<GetApp />}
-              />
-          </a>
+                  deleteIcon={<GetApp />}
+                  />
+              </a>
+            </div>
             </div>
           </MuiThemeProvider>
         </CssBaseline>

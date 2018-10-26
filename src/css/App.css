@@ -9,6 +9,8 @@
 .card{
   width: 10em;
   /* height: 10em; */
+  background-color: black !important;
+  color: white;
 }
 
 .card-image{
@@ -26,7 +28,7 @@
 }
 
 .card-header{
-  background-color: #ff9100 !important;
+  background-color: black !important;
   color: white;
   height: 20vh;
   width: 6em;
@@ -43,7 +45,7 @@
 }
 .banner-top{
   text-align: center;
-  background-color: #2196f3;
+  background-color: #d8d8d8;
   height: 100vh;
 }
 
@@ -58,4 +60,8 @@
 
 #download-link {
   text-decoration: none;
+}
+
+.download-space{
+  padding-top: 10em;
 }
