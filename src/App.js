@@ -57,7 +57,7 @@ class App extends Component {
         <CssBaseline>
           <MuiThemeProvider theme={theme}>
             <div className="banner-top">
-              <CanvasComponent />
+              <CanvasComponent className="canvas-style"/>
               <Grid container justify="center" className="zindex-test">
                 <div className="banner">
                   <Typography variant="h4" className="site-title">
@@ -68,7 +68,6 @@ class App extends Component {
                     <Typography variant="h5" className="buttons-margin">
                       <ProjectGrid checked={checked}/>
                     </Typography>
-
                     <div className="download-space">
                       <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
                         <Chip
