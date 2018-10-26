@@ -45,6 +45,7 @@ class App extends Component {
   };
 
   componentDidMount(){
+    var throttled = _.throttle(updatePosition, 100);
     window.addEventListener('scroll', () => this.handleChange())
   }
 
