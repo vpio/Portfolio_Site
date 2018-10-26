@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
 import GetApp from '@material-ui/icons/GetApp';
 import _ from 'lodash';
+import CanvasComponent from './CanvasComponent';
 
 // Setting up the theme using Material UI Library
 const theme = createMuiTheme({
@@ -56,30 +57,30 @@ class App extends Component {
         <CssBaseline>
           <MuiThemeProvider theme={theme}>
             <div className="banner-top">
-              <Grid container justify="center">
+              <CanvasComponent className="canvas-style"/>
+              <Grid container justify="center" className="zindex-test">
                 <div className="banner">
-                  <Typography variant="h4">
-                      Pio Molina
+                  <Typography variant="h4" className="site-title">
+                    Pio Molina
                   </Typography>
                   {/*Projects
-                  <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
-                </div>
-              </Grid>
-            <Typography variant="h5" className="buttons-margin">
-              <ProjectGrid checked={checked}/>
-            </Typography>
-            <div className="download-space">
-              <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
-                <Chip
-                  label="Download My Resume"
-                  clickable
-                  color="primary"
-                  onDelete={this.handleDelete}
-
-                  deleteIcon={<GetApp />}
-                  />
-              </a>
-            </div>
+                    <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
+                    <Typography variant="h5" className="buttons-margin">
+                      <ProjectGrid checked={checked}/>
+                    </Typography>
+                    <div className="download-space">
+                      <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
+                        <Chip
+                          label="Download My Resume"
+                          clickable
+                          color="primary"
+                          onDelete={this.handleDelete}
+                          deleteIcon={<GetApp />}
+                          />
+                      </a>
+                    </div>
+                  </div>
+                </Grid>
             </div>
           </MuiThemeProvider>
         </CssBaseline>

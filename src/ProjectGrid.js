@@ -28,15 +28,6 @@ const ProjectGrid = props => {
               className="card-image card-fix"
               /> */ }
               <CardActions>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Lizard
-                  </Typography>
-                  <Typography component="p">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                    across all continents except Antarctica
-                  </Typography>
-                </CardContent>
                 <Button href="https://muvers.herokuapp.com/" target="_blank" variant="contained" color="default">Learn More</Button>
               </CardActions>
             </Card>

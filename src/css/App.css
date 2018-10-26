@@ -45,7 +45,7 @@
 }
 .banner-top{
   text-align: center;
-  background-color: #d8d8d8;
+  background-color: #03487c;
   height: 100vh;
 }
 
@@ -64,4 +64,16 @@
 
 .download-space{
   padding-top: 10em;
+}
+
+.zindex-test{
+
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.site-title{
+  color: white !important;
 }
