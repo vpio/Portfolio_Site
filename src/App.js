@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
 import GetApp from '@material-ui/icons/GetApp';
 import _ from 'lodash';
+import CanvasComponent from './CanvasComponent';
 
 // Setting up the theme using Material UI Library
 const theme = createMuiTheme({
@@ -56,6 +57,7 @@ class App extends Component {
         <CssBaseline>
           <MuiThemeProvider theme={theme}>
             <div className="banner-top">
+              <CanvasComponent />
               <Grid container justify="center">
                 <div className="banner">
                   <Typography variant="h4">
