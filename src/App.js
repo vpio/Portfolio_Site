@@ -64,7 +64,7 @@ class App extends Component {
                   <Typography variant="h4" className="site-title">
                     Pio Molina
                   </Typography>
-                  <VerticalLinearStepper />
+
                   {/*Projects
                     <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
                     <div className="main-section">
