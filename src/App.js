@@ -13,6 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import GetApp from '@material-ui/icons/GetApp';
+import _ from 'lodash';
 
 
 
@@ -45,11 +46,11 @@ class App extends Component {
   };
 
   componentDidMount(){
-    var throttled = _.throttle(updatePosition, 100);
-    window.addEventListener('scroll', () => this.handleChange())
+    window.addEventListener('scroll', _.throttle(this.handleChange, 1000, { trailing: false, leading: true }))
   }
 
   handleChange = () => {
+    console.log("handled the change")
     this.setState(state => ({ checked: !state.checked }));
   };
 
