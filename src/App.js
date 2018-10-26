@@ -17,6 +17,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 
+
 configureAnchors({offset: -60, scrollDuration: 200})
 
 // Setting up the theme using Material UI Library

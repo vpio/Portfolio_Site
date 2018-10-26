@@ -35,7 +35,7 @@ const ProjectGrid = props => {
               className="card-image card-fix"
               /> */ }
               <CardActions>
-                <Button href="https://muvers.herokuapp.com/" target="_blank" variant="contained" color="default">Learn More</Button>
+                <Button href="https://muvers.herokuapp.com/" target="_blank" variant="outlined" color="primary">Learn More</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -59,7 +59,7 @@ const ProjectGrid = props => {
               className="wynjoke-logo card-fix"
               /> */ }
               <CardActions>
-                <Button href="https://wynningsmiles.herokuapp.com/" target="_blank" variant="contained" color="default">Learn More</Button>
+                <Button href="https://wynningsmiles.herokuapp.com/" target="_blank" variant="outlined" color="primary">Learn More</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -75,7 +75,7 @@ const ProjectGrid = props => {
                 HTML CSS
               </CardContent>
               <CardActions>
-                <Button href="https://github.com/vpio/HTML-CSS-Recreation" target="_blank" variant="contained" color="default">Learn More</Button>
+                <Button href="https://github.com/vpio/HTML-CSS-Recreation" target="_blank" variant="outlined" color="primary">Learn More</Button>
               </CardActions>
             </Card>
           </Grid>
