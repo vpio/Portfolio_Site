@@ -10,6 +10,7 @@ import Chip from '@material-ui/core/Chip';
 import GetApp from '@material-ui/icons/GetApp';
 import _ from 'lodash';
 import CanvasComponent from './CanvasComponent';
+import VerticalLinearStepper from './VerticalLinearStepper';
 
 // Setting up the theme using Material UI Library
 const theme = createMuiTheme({
@@ -63,6 +64,7 @@ class App extends Component {
                   <Typography variant="h4" className="site-title">
                     Pio Molina
                   </Typography>
+                  <VerticalLinearStepper />
                   {/*Projects
                     <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
                     <div className="main-section">
