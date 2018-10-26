@@ -69,8 +69,8 @@ class App extends Component {
                   <Typography variant="h4">
                       Pio Molina
                   </Typography>
-                  Projects
-                  <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />
+                  {/*Projects
+                  <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
                 </div>
               </Grid>
 
