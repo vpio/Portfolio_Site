@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import SimpleCard from './SimpleCard';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './css/App.css';
 import ProjectGrid from './ProjectGrid';
 import Typography from '@material-ui/core/Typography';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import {blue, pink} from '@material-ui/core/colors/blue';
 import Switch from '@material-ui/core/Switch';
-import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import GetApp from '@material-ui/icons/GetApp';
+import _ from 'lodash';
 
-
-
-
-
-
+// Setting up the theme using Material UI Library
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -44,13 +36,17 @@ class App extends Component {
     checked: false,
   };
 
+  componentDidMount(){
+    window.addEventListener('scroll', _.throttle(this.handleChange, 1000, { trailing: false, leading: true }))
+  }
+
   handleChange = () => {
     this.setState(state => ({ checked: !state.checked }));
   };
 
   handleDelete = () => {
-  alert('You clicked the delete icon.'); // eslint-disable-line no-alert
-}
+    alert('You clicked the delete icon.'); // eslint-disable-line no-alert
+  }
 
   render() {
     const { checked } = this.state;
@@ -65,11 +61,10 @@ class App extends Component {
                   <Typography variant="h4">
                       Pio Molina
                   </Typography>
-                  Projects
-                  <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />
+                  {/*Projects
+                  <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
                 </div>
               </Grid>
-
             <Typography variant="h5" className="buttons-margin">
               <ProjectGrid checked={checked}/>
             </Typography>
