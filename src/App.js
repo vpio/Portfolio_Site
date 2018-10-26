@@ -10,7 +10,7 @@ import Chip from '@material-ui/core/Chip';
 import GetApp from '@material-ui/icons/GetApp';
 import _ from 'lodash';
 import CanvasComponent from './CanvasComponent';
-import VerticalLinearStepper from './VerticalLinearStepper';
+
 
 // Setting up the theme using Material UI Library
 const theme = createMuiTheme({
