@@ -21,6 +21,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
 
+
 configureAnchors({offset: -60, scrollDuration: 200})
 
 // Setting up the theme using Material UI Library
@@ -28,7 +29,7 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       light: '#757ce8',
-      main: '#3f50b5',
+      main: '#1769aa',
       dark: '#002884',
       contrastText: '#fff',
     },

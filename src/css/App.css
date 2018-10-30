@@ -63,7 +63,7 @@
 }
 
 .buttons-margin{
-  padding-top: 2em;
+  padding-top: 16em;
 }
 
 #download-link {
@@ -83,7 +83,7 @@
 }
 
 .site-title{
-  /* padding-top: 3em; */
+  padding-top: 3em;
   color: white !important;
   font-family: 'Chakra Petch', sans-serif !important;
   float: left;
