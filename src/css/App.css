@@ -11,6 +11,7 @@
 .prof-pic {
   width: 800px;
   height: auto;
+  padding-top: 6em;
 }
 
 .card{
@@ -82,9 +83,10 @@
 }
 
 .site-title{
-  padding-top: 3em;
+  /* padding-top: 3em; */
   color: white !important;
   font-family: 'Chakra Petch', sans-serif !important;
+  float: left;
 }
 
 .project-title{
@@ -109,11 +111,12 @@
 }
 
 .button-group{
-  width: 50%;
   margin: 0 auto;
   margin-top: 6em;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  float: right;
 }
 
 .home-button{

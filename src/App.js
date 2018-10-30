@@ -17,6 +17,8 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import MusicSection from './MusicSection';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
 
 configureAnchors({offset: -60, scrollDuration: 200})
@@ -78,6 +80,7 @@ class App extends Component {
       <div className="App">
         <CssBaseline>
           <MuiThemeProvider theme={theme}>
+            <AppBar><Toolbar></Toolbar></AppBar>
             <div className="banner-top">
               <img src={require('./images/pio-headshot.JPG')} alt="pio molina" className="prof-pic"/>
               {/*<CanvasComponent className="canvas-style"/>*/}
@@ -103,14 +106,14 @@ class App extends Component {
                       <Typography variant="h3" className="site-title">
                         Pio Molina
                       </Typography>
-                      <div className="button-group">
+                    {/*  <div className="button-group">
                         <Button href='#section2' color="primary" variant="outlined" size="large" className="home-button">
                           Projects
                         </Button>
                         <Button href='#section3' color="primary" variant="outlined" size="large" className="home-button">
                           Music
                         </Button>
-                      </div>
+                      </div>*/}
                       {/*Projects
                         <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
                       </div>
