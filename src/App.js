@@ -79,7 +79,8 @@ class App extends Component {
         <CssBaseline>
           <MuiThemeProvider theme={theme}>
             <div className="banner-top">
-              <CanvasComponent className="canvas-style"/>
+              <img src={require('./images/pio-headshot.JPG')} alt="pio molina" className="prof-pic"/>
+              {/*<CanvasComponent className="canvas-style"/>*/}
               <Grid container justify="center" className="zindex-test">
                 <div className="banner">
                   <Stepper activeStep={activeStep} orientation="vertical" className="main-stepper">
