@@ -8,6 +8,12 @@
   /* justify-content: center; */
 }
 
+.prof-pic {
+  width: 800px;
+  height: auto;
+  padding-top: 6em;
+}
+
 .card{
   width: 10em;
   /* height: 10em; */
@@ -47,7 +53,7 @@
 }
 .banner-top{
   text-align: center;
-  background-color: #002e4f;
+  background-color: #B4B3AF;
   height: 280vh;
 }
 
@@ -80,6 +86,7 @@
   padding-top: 3em;
   color: white !important;
   font-family: 'Chakra Petch', sans-serif !important;
+  float: left;
 }
 
 .project-title{
@@ -88,7 +95,7 @@
 }
 
 .main-section{
-  padding-top: 17em;
+  padding-top: 40em;
   font-weight: bold;
 }
 
@@ -104,11 +111,12 @@
 }
 
 .button-group{
-  width: 50%;
   margin: 0 auto;
   margin-top: 6em;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
+  float: right;
 }
 
 .home-button{

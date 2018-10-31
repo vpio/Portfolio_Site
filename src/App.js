@@ -17,6 +17,10 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import MusicSection from './MusicSection';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 configureAnchors({offset: -60, scrollDuration: 200})
@@ -26,7 +30,7 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       light: '#757ce8',
-      main: '#3f50b5',
+      main: '#1769aa',
       dark: '#002884',
       contrastText: '#fff',
     },
@@ -78,8 +82,22 @@ class App extends Component {
       <div className="App">
         <CssBaseline>
           <MuiThemeProvider theme={theme}>
+            <AppBar>
+              <Toolbar>
+                <IconButton  color="inherit" aria-label="Menu">
+                  <MenuIcon />
+                </IconButton>
+                <Button href='#section2' color="default" >
+                  Projects
+                </Button>
+                <Button href='#section3' color="default">
+                  Music
+                </Button>
+              </Toolbar>
+            </AppBar>
             <div className="banner-top">
-              <CanvasComponent className="canvas-style"/>
+              <img src={require('./images/pio-headshot.JPG')} alt="pio molina" className="prof-pic"/>
+              {/*<CanvasComponent className="canvas-style"/>*/}
               <Grid container justify="center" className="zindex-test">
                 <div className="banner">
                   <Stepper activeStep={activeStep} orientation="vertical" className="main-stepper">
@@ -102,14 +120,14 @@ class App extends Component {
                       <Typography variant="h3" className="site-title">
                         Pio Molina
                       </Typography>
-                      <div className="button-group">
+                    {/*  <div className="button-group">
                         <Button href='#section2' color="primary" variant="outlined" size="large" className="home-button">
                           Projects
                         </Button>
                         <Button href='#section3' color="primary" variant="outlined" size="large" className="home-button">
                           Music
                         </Button>
-                      </div>
+                      </div>*/}
                       {/*Projects
                         <Switch checked={checked} onChange={this.handleChange} aria-label="Collapse" />*/}
                       </div>
@@ -134,13 +152,13 @@ class App extends Component {
                         </div>
                       </ScrollableAnchor>
                     </div>
-                    <div className="main-section">
+                  {/*  <div className="music-section">
                       <ScrollableAnchor id={'section3'}>
                         <div>
                           <MusicSection />
                         </div>
                       </ScrollableAnchor>
-                    </div>
+                    </div>*/}
                   </div>
                 </Grid>
             </div>
