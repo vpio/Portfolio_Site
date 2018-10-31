@@ -21,6 +21,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import SideBar from './SideBar'
 
 
 configureAnchors({offset: -60, scrollDuration: 200})
@@ -50,7 +52,8 @@ class App extends Component {
   state = {
     checked: false,
     activeStep: 0,
-    isTop: false
+    isTop: false,
+    left: false
   };
 
   componentDidMount(){
@@ -75,6 +78,12 @@ class App extends Component {
     alert('You clicked the delete icon.'); // eslint-disable-line no-alert
   }
 
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open,
+    });
+  };
+
   render() {
     const { checked, activeStep, isTop } = this.state;
 
@@ -84,14 +93,20 @@ class App extends Component {
           <MuiThemeProvider theme={theme}>
             <AppBar>
               <Toolbar>
-                <IconButton  color="inherit" aria-label="Menu">
+                <IconButton  onClick={this.toggleDrawer('left', true)} color="inherit" aria-label="Menu">
                   <MenuIcon />
                 </IconButton>
+                <SideBar
+                  open={this.state.left}
+                  onClose={this.toggleDrawer('left', false)}
+                  onOpen={this.toggleDrawer('left', true)}
+                  toggleDrawer={this.toggleDrawer}
+                  />
                 <Button href='#section2' color="default" >
                   Projects
                 </Button>
-                <Button href='#section3' color="default">
-                  Music
+                <Button href='https://github.com/vpio' target="_blank" color="default">
+                  GitHub
                 </Button>
               </Toolbar>
             </AppBar>

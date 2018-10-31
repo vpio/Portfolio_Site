@@ -25,7 +25,9 @@ const ProjectGrid = props => {
           <Grid item>
             <Card className="card">
               <CardContent>
-             Muver
+                <Typography variant="h5" >
+                  Muver
+                </Typography>
               </CardContent>
             { /*  <CardMedia
               component="img"
@@ -48,7 +50,9 @@ const ProjectGrid = props => {
           <Grid item>
             <Card className="card">
               <CardContent>
-            Wynning Smiles
+                <Typography variant="h5" >
+                  Wynning Smiles
+                </Typography>
               </CardContent>
             { /*  <CardMedia
               component="img"
@@ -72,7 +76,9 @@ const ProjectGrid = props => {
           <Grid item>
             <Card className="card">
               <CardContent>
-                HTML CSS
+                <Typography variant="h5" >
+                  HTML CSS
+                </Typography>
               </CardContent>
               <CardActions>
                 <Button href="https://github.com/vpio/HTML-CSS-Recreation" target="_blank" variant="outlined" color="primary">Learn More</Button>
