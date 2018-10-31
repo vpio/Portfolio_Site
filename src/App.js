@@ -19,7 +19,8 @@ import Button from '@material-ui/core/Button';
 import MusicSection from './MusicSection';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 configureAnchors({offset: -60, scrollDuration: 200})
@@ -81,7 +82,19 @@ class App extends Component {
       <div className="App">
         <CssBaseline>
           <MuiThemeProvider theme={theme}>
-            <AppBar><Toolbar></Toolbar></AppBar>
+            <AppBar>
+              <Toolbar>
+                <IconButton  color="inherit" aria-label="Menu">
+                  <MenuIcon />
+                </IconButton>
+                <Button href='#section2' color="default" >
+                  Projects
+                </Button>
+                <Button href='#section3' color="default">
+                  Music
+                </Button>
+              </Toolbar>
+            </AppBar>
             <div className="banner-top">
               <img src={require('./images/pio-headshot.JPG')} alt="pio molina" className="prof-pic"/>
               {/*<CanvasComponent className="canvas-style"/>*/}
@@ -139,13 +152,13 @@ class App extends Component {
                         </div>
                       </ScrollableAnchor>
                     </div>
-                    <div className="main-section">
+                  {/*  <div className="music-section">
                       <ScrollableAnchor id={'section3'}>
                         <div>
                           <MusicSection />
                         </div>
                       </ScrollableAnchor>
-                    </div>
+                    </div>*/}
                   </div>
                 </Grid>
             </div>
