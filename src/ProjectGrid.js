@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 const ProjectGrid = props => {
   return(
     <div>
-      <Grow in={props.checked}>
+      <Grow in={true}>
         <div className="project-section-title">
           <Typography variant="h2" className="project-title">
             Projects
@@ -21,7 +21,7 @@ const ProjectGrid = props => {
         </div>
       </Grow>
       <Grid container justify="center" spacing={16}>
-        <Grow in={props.checked}>
+        <Grow in={true}>
           <Grid item>
             <Card className="card">
               <CardContent>
@@ -43,7 +43,7 @@ const ProjectGrid = props => {
           </Grid>
         </Grow>
         <Grow
-          in={props.checked}
+          in={true}
           style={{ transformOrigin: '0 0 0' }}
             {...(props.checked ? { timeout: 1000 } : {})}
           >
@@ -69,7 +69,7 @@ const ProjectGrid = props => {
           </Grid>
         </Grow>
         <Grow
-          in={props.checked}
+          in={true}
           style={{ transformOrigin: '0 0 0' }}
             {...(props.checked ? { timeout: 1500 } : {})}
           >
