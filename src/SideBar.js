@@ -11,19 +11,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 const sideList = (
       <div>
         <List>
-          {['Hello', 'This Application', 'Is Still In', 'Production'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-        <ListItem button>
-          <ListItemIcon><InboxIcon /></ListItemIcon>
-          <ListItemText primary={'But'} />
-        </ListItem>
         <a id="download-link" href="mailto:piomolinacode@gmail.com" download>
         <ListItem button>
           <ListItemIcon><MailIcon /></ListItemIcon>

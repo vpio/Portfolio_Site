@@ -93,15 +93,6 @@ class App extends Component {
           <MuiThemeProvider theme={theme}>
             <AppBar>
               <Toolbar>
-                <IconButton  onClick={this.toggleDrawer('left', true)} color="inherit" aria-label="Menu">
-                  <MenuIcon />
-                </IconButton>
-                <SideBar
-                  open={this.state.left}
-                  onClose={this.toggleDrawer('left', false)}
-                  onOpen={this.toggleDrawer('left', true)}
-                  toggleDrawer={this.toggleDrawer}
-                  />
                 <Button href='#section2' color="default" >
                   Projects
                 </Button>
@@ -116,10 +107,6 @@ class App extends Component {
               <Grid container justify="center" className="zindex-test">
                 <div className="banner">
                   <Stepper activeStep={activeStep} orientation="vertical" className="main-stepper">
-                    <Step>
-                      <StepLabel></StepLabel>
-
-                    </Step>
                     <Step>
                       <StepLabel></StepLabel>
 
@@ -148,22 +135,22 @@ class App extends Component {
                       </div>
                     </ScrollableAnchor>
                     <div className="main-section">
+                      <div className="download-space">
+                        <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
+                          <Chip
+                            label="Download My Resume"
+                            clickable
+                            color="primary"
+                            onDelete={this.handleDelete}
+                            deleteIcon={<GetApp />}
+                            />
+                        </a>
+                      </div>
                       <ScrollableAnchor id={'section2'}>
                         <div>
                           <Typography variant="h5" className="buttons-margin">
                             <ProjectGrid checked={isTop}/>
                           </Typography>
-                          <div className="download-space">
-                            <a id="download-link" href="/Pio_Molina_Resume_General.pdf" download>
-                              <Chip
-                                label="Download My Resume"
-                                clickable
-                                color="primary"
-                                onDelete={this.handleDelete}
-                                deleteIcon={<GetApp />}
-                                />
-                            </a>
-                          </div>
                         </div>
                       </ScrollableAnchor>
                     </div>
